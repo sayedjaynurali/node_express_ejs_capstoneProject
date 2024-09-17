@@ -208,11 +208,14 @@
         </div>
     </div>
 
-    <div id="BS"></div>
+    <div id="BS" class="text-center mb-4 display-4" style="display: none;">
+        <h1><%= your %> <span style="color: #ffc107;"><%= blogs %></span></h1>
+    </div>
 
     <div id="blogContainer"></div>
 
     <script>
+
 
         // Creating a New Blog
         const createButton = document.getElementById("create-button");
@@ -221,6 +224,9 @@
         let i = 0;
 
         createButton.addEventListener('click', () => {
+            const bullshit = document.getElementById("BS")
+            bullshit.style.display = "block";
+
             // Fetch the inputs for validation
             const blogImageInput = document.getElementById("blog-image-input");
             const blogTitleInput = document.getElementById("blog-title-input").value.trim();
