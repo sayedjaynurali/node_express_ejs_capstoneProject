@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/styles/index.css">
+    <title>Just Blogs</title>
+</head>
+
+<body>
+    <div class="container-fluid, px-4 pt-0 border-bottom" id="special">
+
+        <!-- First Header -->
+
+        <header class="py-3">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-between">
+                    <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-instagram" viewBox="0 0 16 16" style="color: black;">
+                            <path
+                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                        </svg>
+                    </a>
+
+                    <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-whatsapp" viewBox="0 0 16 16" style="color: black;">
+                            <path
+                                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                        </svg>
+                    </a>
+
+                    <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-facebook" viewBox="0 0 16 16" style="color: black;">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                        </svg>
+                    </a>
+
+                    <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-twitter-x" viewBox="0 0 16 16" style="color: black;">
+                            <path
+                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                        </svg>
+                    </a>
+
+
+                    <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-pinterest" viewBox="0 0 16 16" style="color: black;">
+                            <path
+                                d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0" />
+                        </svg>
+                    </a>
+
+                    <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none ms-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-telephone me-2" viewBox="0 0 16 16" style="color: black;">
+                            <path
+                                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                        </svg>
+                        +91-8888888888
+                    </a>
+
+                    <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-envelope me-2" viewBox="0 0 16 16" style="color: black;">
+                            <path
+                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                        </svg>
+                        help@velle.com
+                    </a>
+
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 ms-5" role="search">
+                        <input type="search" class="form-control" placeholder="Search..." aria-label="Search"
+                            style="opacity: 0.3;">
+                    </form>
+
+                    <div class="text-end">
+                        <!-- <a href="/login"><button type="button" class="btn btn-outline-dark me-2">Login</button></a> -->
+                        <a href="/login"><button type="button" class="btn btn-warning">Login</button></a>
+              </div>
+                    </div>
+                </div>
+        </header>
+
+        <!-- Second Header -->
+
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
+                <a href="#"
+                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                    <img src="/images/logo1.png" alt="" class="bi me-2" width="40" height="32">
+                    <span class="fs-4">Velle</span>
+                </a>
+
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="#" class="nav-link text-dark" aria-current="page">Home</a></li>
+                    <li class="nav-item">
+                        <div class="btn-group">
+                            <button class="btn btn-link dropdown-toggle text-dark" type="button"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"
+                                style="text-decoration: none;">
+                                Categories
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><span class="dropdown-item-text" style="font-weight: bold;">Category 1</span></li>
+                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><span class="dropdown-item-text" style="font-weight: bold;">Category 2</span></li>
+                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link text-dark">Products</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-dark">Services</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-dark">About Us</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-dark">Gallery</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-dark">Videos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-dark">Testimonials</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-dark">Contact Us</a></li>
+                </ul>
+            </header>
+        </div>
+
+        <!-- Hero -->
+
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="/images/logo1.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                    width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6 col">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 justify-content-md-center row">Best T-Shirt
+                </h1>
+                <p class="lead justify-content-md-center row">Printing Services</p>
+                <div class="d-grid gap-2 d-md-fle justify-content-center row">
+                    <button type="button" class="btn btn-danger btn-lg px-4 me-md-2">Enquire Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Caoursel - 1 -->
+
+    <div class="container">
+        <h1 class="text-center fw-bold m-0 p-5 text-uppercase">men</h1>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="card border-0">
+                    <img src="/images/mockup1.png" class="card-img-top rounded" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-dark">Academic T-Shirts</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0">
+                    <img src="/images/mockup21.png" class="card-img-top rounded" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-dark">Corporate T-Shirts</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0">
+                    <img src="/images/mockup22.png" class="card-img-top rounded" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-dark">Commercial T-Shirts</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0">
+                    <img src="/images/mockup20.png" class="card-img-top rounded" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-dark">Event T-Shirts</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel - 2  -->
+
+    <div class="container">
+        <h1 class="text-center fw-bold m-0 p-5 text-uppercase">women</h1>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="card border-0">
+                    <img src="/images/mockup26.png" class="card-img-top rounded" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-dark">Academic T-Shirts</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0">
+                    <img src="/images/mockup23.png" class="card-img-top rounded" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-dark">Corporate T-Shirts</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0">
+                    <img src="/images/mockup24.png" class="card-img-top rounded" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-dark">Commercial T-Shirts</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0">
+                    <img src="/images/mockup25.png" class="card-img-top rounded" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-dark">Event T-Shirts</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel - 3  -->
+
+    <div class="container mt-5">
+        <h1 class="text-center fw-bold m-0 p-5 text-uppercase">Products</h1>
+
+        <!-- Carousel Wrapper -->
+        <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+            <div class="carousel-inner">
+
+                <!-- First Slide (First 4 Cards) -->
+                <div class="carousel-item active">
+                    <div class="row row-cols-1 row-cols-md-5 g-4">
+                        <!-- Card 1 -->
+                        <div class="col">
+                            <div class="card border-0">
+                                <img src="/images/mockup5.jpeg" class="card-img-top rounded" alt="...">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-dark">Academic T-Shirts</h5>
+                                    <a href="#" class="btn btn-danger my-3">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col">
+                            <div class="card border-0">
+                                <img src="/images/mockup6.jpeg" class="card-img-top rounded" alt="...">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-dark">Academic T-Shirts</h5>
+                                    <a href="#" class="btn btn-danger my-3">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col">
+                            <div class="card border-0">
+                                <img src="/images/mockup7.jpeg" class="card-img-top rounded" alt="...">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-dark">Academic T-Shirts</h5>
+                                    <a href="#" class="btn btn-danger my-3">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="col">
+                            <div class="card border-0">
+                                <img src="/images/mockup8.jpeg" class="card-img-top rounded" alt="...">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-dark">Academic T-Shirts</h5>
+                                    <a href="#" class="btn btn-danger my-3">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="col">
+                            <div class="card border-0">
+                                <img src="/images/mockup9.jpeg" class="card-img-top rounded" alt="...">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-dark">Academic T-Shirts</h5>
+                                    <a href="#" class="btn btn-danger my-3">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Slide (Second 4 Cards) -->
+                <div class="carousel-item">
+                    <div class="row row-cols-1 row-cols-md-5 g-4">
+                        <!-- Card 6 -->
+                        <div class="col">
+                            <div class="card border-0">
+                                <img src="/images/mockup10.jpeg" class="card-img-top rounded" alt="...">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-dark">Academic Hoodies</h5>
+                                    <a href="#" class="btn btn-danger my-3">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 7 -->
+                        <div class="col">
+                            <div class="card border-0">
+                                <img src="/images/mockup11.jpeg" class="card-img-top rounded" alt="...">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-dark">Academic Hoodies</h5>
+                                    <a href="#" class="btn btn-danger my-3">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 8 -->
+                        <div class="col">
+                            <div class="card border-0">
+                                <img src="/images/mockup12.jpeg" class="card-img-top rounded" alt="...">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-dark">Academic Hoodies</h5>
+                                    <a href="#" class="btn btn-danger my-3">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 9 -->
+                        <div class="col">
+                            <div class="card border-0">
+                                <img src="/images/mockup13.jpeg" class="card-img-top rounded" alt="...">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-dark">Academic Hoodies</h5>
+                                    <a href="#" class="btn btn-danger my-3">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 10 -->
+                        <div class="col">
+                            <div class="card border-0">
+                                <img src="/images/mockup19.png" class="card-img-top rounded" alt="...">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-dark">Academic Hoodies</h5>
+                                    <a href="#" class="btn btn-danger my-3">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Carousel 4 -->
+
+    <div class="container">
+        <h1 class="text-center fw-bold m-0 p-5 text-uppercase">services</h1>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="card border-0">
+                    <img src="/images/mockup15.jpeg" class="card-img-top rounded" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-dark">Character Printing</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis architecto
+                            incidunt
+                            deleniti nisi fugiat doloribus pariatur perferendis corporis!</p>
+                        <a href="#" class="btn btn-danger my-3">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0">
+                    <img src="/images/mockup16.jpeg" class="card-img-top rounded" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-dark">Image Printing</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis architecto
+                            incidunt
+                            deleniti nisi fugiat doloribus pariatur perferendis corporis!</p>
+                        <a href="#" class="btn btn-danger my-3">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0">
+                    <img src="/images/mockup17.jpeg" class="card-img-top rounded" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-dark">Promotional T-shirts</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis architecto
+                            incidunt
+                            deleniti nisi fugiat doloribus pariatur perferendis corporis!</p>
+                        <a href="#" class="btn btn-danger my-3">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0">
+                    <img src="/images/mockup18.jpeg" class="card-img-top rounded" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-dark">Couple T-Shirts</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis architecto
+                            incidunt
+                            deleniti nisi fugiat doloribus pariatur perferendis corporis!</p>
+                        <a href="#" class="btn btn-danger my-3">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="/images/groupPic.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                    width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">About <span style="color: #dc3545;">Us</span>
+                </h1>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita facere ab, suscipit
+                    voluptatum
+                    provident architecto minus asperiores blanditiis veniam eligendi non dolore quaerat nostrum nulla
+                    rerum
+                    mollitia nisi accusantium possimus.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn btn-danger btn-lg px-4 me-md-2">Know More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery -->
+
+    <div class="container mt-0">
+        <h1 class="text-center fw-bold m-0 p-5 text-uppercase">gallery</h1>
+
+        <!-- Carousel Wrapper -->
+        <div id="cardCarousel2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+            <div class="carousel-inner">
+
+                <!-- First Slide (First 4 Cards) -->
+                <div class="carousel-item active">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <!-- Card 1 -->
+                        <div class="col">
+                            <div class="card border-0">
+                                <img src="/images/mockup5.jpeg" class="card-img-top rounded" alt="...">
+                                <div class="card-body text-center">
+                                    <!-- <h5 class="card-title text-dark">Academic T-Shirts</h5>
+                      <a href="#" class="btn btn-danger my-3">Shop Now</a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col">
+                            <div class="card border-0">
+                                <img src="/images/mockup6.jpeg" class="card-img-top rounded" alt="...">
+                                <div class="card-body text-center">
+                                    <!-- <h5 class="card-title text-dark">Academic T-Shirts</h5>
+                      <a href="#" class="btn btn-danger my-3">Shop Now</a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col">
+                            <div class="card border-0">
+                                <img src="/images/mockup7.jpeg" class="card-img-top rounded" alt="...">
+                                <div class="card-body text-center">
+                                    <!-- <h5 class="card-title text-dark">Academic T-Shirts</h5>
+                      <a href="#" class="btn btn-danger my-3">Shop Now</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Slide (Second 4 Cards) -->
+                <div class="carousel-item">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <!-- Card 6 -->
+                        <div class="col">
+                            <div class="card border-0">
+                                <img src="/images/mockup10.jpeg" class="card-img-top rounded" alt="...">
+                                <div class="card-body text-center">
+                                    <!-- <h5 class="card-title text-dark">Academic Hoodies</h5>
+                      <a href="#" class="btn btn-danger my-3">Shop Now</a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 7 -->
+                        <div class="col">
+                            <div class="card border-0">
+                                <img src="/images/mockup6.jpeg" class="card-img-top rounded" alt="...">
+                                <div class="card-body text-center">
+                                    <!-- <h5 class="card-title text-dark">Academic Hoodies</h5>
+                      <a href="#" class="btn btn-danger my-3">Shop Now</a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 8 -->
+                        <div class="col">
+                            <div class="card border-0">
+                                <img src="/images/mockup5.jpeg" class="card-img-top rounded" alt="...">
+                                <div class="card-body text-center">
+                                    <!-- <h5 class="card-title text-dark">Academic Hoodies</h5>
+                      <a href="#" class="btn btn-danger my-3">Shop Now</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Videos -->
+    <div class="container">
+        <h1 class="text-center fw-bold m-0 p-5 text-uppercase">videos</h1>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card border-0">
+                    <!-- <img src="/images/mockup15.jpeg" class="card-img-top rounded" alt="..."> -->
+                    <div class="ratio ratio-16x9">
+                        <div><iframe src="https://www.youtube.com/embed/RGQIbeu892c?si=16KkLD5T9cWGRG59"
+                                class="card-img-top rounded" style="width: 100%; height: 100%;">
+                            </iframe></div>
+                    </div>
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-dark">Character Printing</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis architecto
+                            incidunt
+                            deleniti nisi fugiat doloribus pariatur perferendis corporis!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0">
+                    <!-- <img src="/images/mockup16.jpeg" class="card-img-top rounded" alt="..."> -->
+                    <div class="ratio ratio-16x9">
+                        <div><iframe src="https://www.youtube.com/embed/wQuum9hVX04?si=6Gm7A4WqD6rqFVDd"
+                                class="card-img-top rounded" style="width: 100%; height: 100%;">
+                            </iframe></div>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-dark">Image Printing</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis architecto
+                            incidunt
+                            deleniti nisi fugiat doloribus pariatur perferendis corporis!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us -->
+
+    <div class="container mt-0">
+        <h1 class="text-center fw-bold m-0 p-5 text-uppercase">what they are saying <span style="color: #dc3545;">about
+                us</span></h1>
+
+        <!-- Carousel Wrapper -->
+        <div id="cardCarousel3" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+            <div class="carousel-inner">
+
+                <!-- First Slide (First 2 Cards) -->
+                <div class="carousel-item active">
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <!-- Card 1 -->
+                        <div class="col">
+                            <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="/images/mockup28.jpeg" class="img-fluid rounded-start"
+                                            alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Pankaj Sharma</h5>
+                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                elit. Iure qui natus
+                                                saepe a culpa pariatur recusandae, ratione omnis.</p>
+                                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                                                    ago</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col">
+                            <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="/images/mockup27.png" class="img-fluid rounded-start"
+                                            alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Riya Kapoor</h5>
+                                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                                elit. Nesciunt totam nemo
+                                                incidunt laborum laudantium.</p>
+                                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                                                    ago</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Slide (Second 2 Cards) -->
+                <div class="carousel-item">
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <!-- Card 3 -->
+                        <div class="col">
+                            <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="/images/mockup28.jpeg" class="img-fluid rounded-start"
+                                            alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Pankaj Sharma</h5>
+                                            <p class="card-text">This is a wider card with supporting text below as a
+                                                natural lead-in to
+                                                additional content. This content is a little bit longer.</p>
+                                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                                                    ago</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="col">
+                            <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="/images/mockup27.png" class="img-fluid rounded-start"
+                                            alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Riya Kapoor</h5>
+                                            <p class="card-text">This is a wider card with supporting text below as a
+                                                natural lead-in to
+                                                additional content. This content is a little bit longer.</p>
+                                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                                                    ago</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel3" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel3" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Contact Us  Form-->
+
+    <div class="new_home_web">
+        <div class="responsive-container-block big-container">
+            <img class="imgBG" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/aw65.png">
+            <div class="responsive-container-block textContainer">
+                <div class="topHead">
+                    <p class="text-blk heading">
+                        Get in
+                        <span class="orangeText">
+                            Touch
+                        </span>
+                    </p>
+                    <div class="orangeLine" id="w-c-s-bgc_p-2-dm-id">
+                    </div>
+                </div>
+                <p class="text-blk subHeading">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore
+                    magna al iqua.
+                </p>
+            </div>
+            <div class="responsive-container-block container">
+                <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-10 line" id="i69b">
+                    <form class="form-box">
+                        <div class="container-block form-wrapper">
+                            <div class="responsive-container-block">
+                                <div class="left4">
+                                    <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6"
+                                        id="i10mt-2">
+                                        <input class="input" id="ijowk-2" name="FirstName" placeholder="Full Name">
+                                    </div>
+                                    <!-- <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                        <input class="input" id="indfi-2" name="Last Name" placeholder="Last Name">
+                      </div> -->
+                                    <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                                        <input class="input" id="ipmgh-2" name="Email" placeholder="Email Address">
+                                    </div>
+                                    <div
+                                        class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 lastPhone">
+                                        <input class="input" id="imgis-2" name="PhoneNumber" placeholder="Phone Number">
+                                    </div>
+                                </div>
+                                <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12"
+                                    id="i634i-2">
+                                    <textarea class="textinput" id="i5vyy-2" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <a class="send rounded" href="#" id="w-c-s-bgc_p-1-dm-id">
+                                Send
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Location -->
+
+    <section id="contact" class="contact">
+        <div class="container aos-init aos-animate pb-5" data-aos="fade-up">
+
+            <div class="section-header">
+                <h1 class="text-center fw-bold m-0 p-5 text-uppercase">Contact<span style="color: #dc3545;">
+                        us</span></h1>
+            </div>
+
+            <div class="mb-3">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d673.8837206649565!2d88.3707815084811!3d22.753140392039136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89b1ad05f876b%3A0x227b82e398b5d9c!2sSanghati%20club!5e0!3m2!1sen!2sin!4v1725125091549!5m2!1sen!2sin"
+                    style="border:0; width: 100%; height: 350px;" allowfullscreen="" frameborder="0"
+                    allowfullscreen=""></iframe>
+
+            </div><!-- End Google Maps -->
+
+            <div class="row gy-4">
+
+                <div class="col-md-6">
+                    <div class="info-item  d-flex align-items-center">
+                        <i class="icon bi bi-map flex-shrink-0"></i>
+                        <div>
+                            <h3>Our Address</h3>
+                            <p>29/1, Jogen Roy Road, Kumarpara, Barrackpore , Kolkata, India, 700123
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- End Info Item -->
+
+                <div class="col-md-6">
+                    <div class="info-item d-flex align-items-center">
+                        <i class="icon bi bi-envelope flex-shrink-0"></i>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>contactus@velle.com</p>
+                        </div>
+                    </div>
+                </div><!-- End Info Item -->
+
+                <div class="col-md-6">
+                    <div class="info-item  d-flex align-items-center">
+                        <i class="icon bi bi-telephone flex-shrink-0"></i>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p>+91 88888 88888</p>
+                        </div>
+                    </div>
+                </div><!-- End Info Item -->
+
+                <div class="col-md-6">
+                    <div class="info-item  d-flex align-items-center">
+                        <i class="icon bi bi-share flex-shrink-0"></i>
+                        <div>
+                            <h3>Opening Hours</h3>
+                            <div><strong>Mon-Sat:</strong> 11AM - 23PM;
+                                <strong>Sunday:</strong> Closed
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Info Item -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer id="footer" class="footer">
+
+        <div class="container">
+            <div class="row gy-3">
+                <div class="col-lg-3 col-md-6 d-flex">
+                    <i class="bi bi-geo-alt icon"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>
+                            29/1, Jogen Roy Road <br>
+                            Kumarpara, Barrackpore<br>
+                            Kolkata - 700123
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links d-flex">
+                    <i class="bi bi-telephone icon"></i>
+                    <div>
+                        <h4>Reservations</h4>
+                        <p>
+                            <strong>Phone:</strong> +91 88888 88888<br>
+                            <strong>Email:</strong> help@velle.com<br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links d-flex">
+                    <i class="bi bi-clock icon"></i>
+                    <div>
+                        <h4>Opening Hours</h4>
+                        <p>
+                            <strong>Mon-Sat: 11AM</strong> - 23PM<br>
+                            Sunday: Closed
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Follow Us</h4>
+                    <div class="social-links d-flex">
+                        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                © Copyright <strong><span>Velle</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Maintained and Curated by <a href="#" style="color: #fff;">Velle</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- javaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
