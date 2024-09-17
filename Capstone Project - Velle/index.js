@@ -21,7 +21,7 @@ app.get("/login", (req,res) => {
 
 app.post("/submit", (req, res) => {
    if (req.body.username == "jaynur" && req.body.password == "juned" ) {
-    res.render("user-blogs.ejs", {hello: "Your Blogs"});
+    res.render("user-blogs.ejs", {your: "Your ",blogs: "Blogs"});
    } else {
     res.render("login.ejs",{heading: "Login", subHeading: "Invalid Username or Password!"});
    }
