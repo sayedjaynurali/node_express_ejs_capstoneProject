@@ -1,4 +1,4 @@
-# Capstone Project – Velle
+# Capstone Project – Velle Fashion
 
 ## Introduction
 **Velle** is a web-based platform for showcasing, managing, and browsing customized T-shirt and hoodie products, printing services, and related blogs. Built as a capstone project, Velle aims to provide users with a smooth experience to explore products by category, read blogs, contact the team, and—for admins—manage content directly from the web interface.
