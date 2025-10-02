@@ -53,9 +53,9 @@ flowchart TD
     A([User Launches Site]) --> B[Homepage]
     B --> C[Login Form]
     C --> D{Login Successful?}
-    D -->|Yes| E[View Categories]
-    D -->|Yes| F[User Blogs]
-    D -->|Yes(Admin)| G[Admin Panel]
+    D -->|Yes - User| E[View Categories]
+    D -->|Yes - User| F[User Blogs]
+    D -->|Yes - Admin| G[Admin Panel]
     D -->|No| H[Error Message]
     H --> C
     E --> I[Browse Products/Services]
@@ -118,9 +118,7 @@ npm start
 - Extend authentication and admin logic in `index.js`
 
 ## Contact
-- **Email:** contactus@velle.com  
-- **Address:** 29/1, Jogen Roy Road, Kumarpara, Barrackpore, Kolkata, India, 700123  
-- **Phone:** +91 88888 88888  
+- **Email:** jaynursayedali@gmail.com
 
 ---
 
